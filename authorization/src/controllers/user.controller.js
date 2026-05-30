@@ -1,7 +1,7 @@
 import { users } from "../userData/userData.js";
 import jwt from "jsonwebtoken"
 
-export const singIn = (req, res) => {
+export const signIn = (req, res) => {
     try {
         // const {email} = users.email;
 
