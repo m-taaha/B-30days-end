@@ -45,7 +45,9 @@ const user = async (req, res) => {
 
 
     // save user in redis -- as redis saves things in string so stringify. and when returning res make sure to parse it into object
-    await client.set(`user:${id}`, JSON.stringify(user))
+    // await client.set(`user:${id}`, JSON.stringify(user))
+    await client.setEx(`user:${id}`, 30, JSON.stringify(user))
+
 
 
 
